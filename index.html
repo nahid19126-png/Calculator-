@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casio fx-100MS Plus Emulator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'DotMatrix';
+            src: url('https://fonts.cdnfonts.com/s/14883/DotMatrix.woff') format('woff');
+        }
+        body {
+            background-color: #121212;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Inter', sans-serif;
+        }
+        #root {
+            width: 100%;
+            height: 100%;
+            max-width: 450px;
+            max-height: 900px;
+        }
+        .lcd-text {
+            font-family: 'Share Tech Mono', monospace;
+            letter-spacing: -1px;
+        }
+        .button-active:active {
+            transform: translateY(2px);
+            filter: brightness(0.8);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+        }
+        .d-pad-btn:active {
+            background-color: #555;
+        }
+        .power-off {
+            background-color: #000 !important;
+            box-shadow: none !important;
+        }
+        .power-off * {
+            display: none !important;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "mathjs": "https://esm.sh/mathjs@^15.1.0",
+    "@google/genai": "https://esm.sh/@google/genai@^0.2.1"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
